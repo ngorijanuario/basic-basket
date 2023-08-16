@@ -11,7 +11,7 @@ import SwiftUI
 struct basic_basketApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            Welcome()
         }
     }
 }
