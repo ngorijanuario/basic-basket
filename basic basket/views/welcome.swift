@@ -10,7 +10,7 @@ import SwiftUI
 struct Welcome: View {
     var body: some View {
         VStack {
-            
+            Spacer()
             componentes
                 .padding(.bottom, 10)
             
@@ -47,7 +47,7 @@ extension Welcome{
                 .font(.title)
                 .fontWeight(.semibold)
                 .multilineTextAlignment(.center)
-                .foregroundColor(Color(red: 0.255, green: 0.215, blue: 0.0))
+                .foregroundColor(Color(hue: 0.115, saturation: 1.0, brightness: 1.0))
             
             Text("From the Cart to Your Home: Buy the Basics Instantly.")
                 .foregroundColor(.secondary)
@@ -63,18 +63,19 @@ extension Welcome{
                             .fontWeight(.bold)
                             .frame(width: 250,height: 50)
                             .foregroundColor(.white)
-                            .background(Color(red: 0.255, green: 0.215, blue: 0.0))
+                            .background(Color(hue: 0.115, saturation: 1.0, brightness: 1.0))
                             .clipShape(Capsule())
                 }
             )
             
             HStack(alignment: .center){
+                
                 Text("I accept the")
                     .fontWeight(.light)
                     .foregroundColor(.secondary)
                 Link("privacy conditions",
                      destination: URL(string: "https://www.bicuar.ao/privacidade")!)
-                .foregroundColor(Color(red: 0.255, green: 0.215, blue: 0.0))
+                .foregroundColor(Color(hue: 0.115, saturation: 1.0, brightness: 1.0))
                 
             }
             

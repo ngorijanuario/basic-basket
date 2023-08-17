@@ -32,7 +32,7 @@ struct AllScreens: View {
                 }
             
         }
-        .accentColor(Color(red: 0.255, green: 0.215, blue: 0.0))
+        .accentColor(Color(hue: 0.115, saturation: 1.0, brightness: 1.0))
     }
 }
 

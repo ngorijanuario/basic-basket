@@ -9,14 +9,333 @@ import SwiftUI
 
 struct s1: View {
     var body: some View {
-        ZStack {
+        
+        VStack {
+            HStack{
+                Text("Cesta Basíca")
+                    .font(.title)
+                    .fontWeight(.bold)
+                    .foregroundColor(Color(hue: 0.115, saturation: 1.0, brightness: 1.0))
+                Spacer()
+            }
+            ScrollView(.horizontal){
+                HStack{
+                    Button(
+                           action: {
+                               print("All features")
+                           },
+                           label: {
+                                Text("All features")
+                                    .fontWeight(.bold)
+                                    .frame(width: 150,height: 50)
+                                    .foregroundColor(.white)
+                                    .background(Color(hue: 0.115, saturation: 0.979, brightness: 1.0))
+                                    .clipShape(Capsule())
+                        }
+                    )
+                    Button(
+                           action: {
+                               print("Grains and Cereals")
+                           },
+                           label: {
+                                Text("Grains and Cereals")
+                                    .fontWeight(.bold)
+                                    .frame(width: 150,height: 50)
+                                    .foregroundColor(.white)
+                                    .background(Color(hue: 0.115, saturation: 0.979, brightness: 1.0, opacity: 0.379))
+                                    .clipShape(Capsule())
+                        }
+                    )
+                    
+                    Button(
+                           action: {
+                               print("Meat and fish")
+                           },
+                           label: {
+                                Text("Meat and fish")
+                                    .fontWeight(.bold)
+                                    .frame(width: 150,height: 50)
+                                    .foregroundColor(.white)
+                                    .background(Color(hue: 0.115, saturation: 0.979, brightness: 1.0, opacity: 0.379))
+                                    .clipShape(Capsule())
+                        }
+                    )
+                    
+                    Button(
+                           action: {
+                               print("Vegetables and Greens")
+                           },
+                           label: {
+                                Text("Vegetables and Greens")
+                                    .fontWeight(.bold)
+                                    .frame(width: 150,height: 50)
+                                    .foregroundColor(.white)
+                                    .background(Color(hue: 0.115, saturation: 0.979, brightness: 1.0, opacity: 0.379))
+                                    .clipShape(Capsule())
+                        }
+                    )
+                    
+                }
+                
+                
+            }
             
-            Circle()
-                .frame(width: 200,height: 200)
-                .foregroundColor(.blue)
-            Text("\(1)")
-                .foregroundColor(.white)
-                .font(.system(size: 70, weight: .bold))
+            ScrollView(.vertical){
+                HStack{
+                    VStack{
+                        
+                        Image("açucar")
+                            .resizable()
+                            .frame(width: 135, height: 135)
+                        Text("600,00kz")
+                            .foregroundColor(Color(hue: 0.115, saturation: 1.0, brightness: 1.0))
+                        Text("Sugar")
+                            .font(.headline)
+                            .fontWeight(.bold)
+                            .foregroundColor(Color.gray)
+                            .multilineTextAlignment(.center)
+                            .frame(width: 135.0)
+                        
+                        Button(
+                               action: {
+                                   print("Add to Cart")
+                               },
+                               label: {
+                                    Text("Add to Cart")
+                                        .fontWeight(.bold)
+                                        .frame(width: 150,height: 50)
+                                        .foregroundColor(.white)
+                                        .background(Color(hue: 0.115, saturation: 0.979, brightness: 1.0, opacity: 0.379))
+                                        .clipShape(Capsule())
+                            }
+                        )
+                        
+                    }.padding()
+                    
+                    VStack{
+                        
+                        Image("fuba")
+                            .resizable()
+                            .frame(width: 135, height: 135)
+                        Text("300,00kz")
+                            .foregroundColor(Color(hue: 0.115, saturation: 1.0, brightness: 1.0))
+                        Text("Corn meal")
+                            .font(.headline)
+                            .fontWeight(.bold)
+                            .foregroundColor(Color.gray)
+                            .multilineTextAlignment(.center)
+                            .frame(width: 135.0)
+                        
+                        Button(
+                               action: {
+                                   print("Add to Cart")
+                               },
+                               label: {
+                                    Text("Add to Cart")
+                                        .fontWeight(.bold)
+                                        .frame(width: 150,height: 50)
+                                        .foregroundColor(.white)
+                                        .background(Color(hue: 0.115, saturation: 0.979, brightness: 1.0, opacity: 0.379))
+                                        .clipShape(Capsule())
+                            }
+                        )
+                        
+                    }.padding()
+                    
+                }
+                
+                HStack{
+                    VStack{
+                        
+                        Image("frango")
+                            .resizable()
+                            .frame(width: 135, height: 135)
+                        Text("1.500,00kz")
+                            .foregroundColor(Color(hue: 0.115, saturation: 1.0, brightness: 1.0))
+                        Text("Chicken")
+                            .font(.headline)
+                            .fontWeight(.bold)
+                            .foregroundColor(Color.gray)
+                            .multilineTextAlignment(.center)
+                            .frame(width: 135.0)
+                        
+                        Button(
+                               action: {
+                                   print("Add to Cart")
+                               },
+                               label: {
+                                    Text("Add to Cart")
+                                        .fontWeight(.bold)
+                                        .frame(width: 150,height: 50)
+                                        .foregroundColor(.white)
+                                        .background(Color(hue: 0.115, saturation: 0.979, brightness: 1.0, opacity: 0.379))
+                                        .clipShape(Capsule())
+                            }
+                        )
+                        
+                    }.padding()
+                    
+                    VStack{
+                        
+                        Image("açucar")
+                            .resizable()
+                            .frame(width: 135, height: 135)
+                        Text("600,00kz")
+                            .foregroundColor(Color(hue: 0.115, saturation: 1.0, brightness: 1.0))
+                        Text("Sugar")
+                            .font(.headline)
+                            .fontWeight(.bold)
+                            .foregroundColor(Color.gray)
+                            .multilineTextAlignment(.center)
+                            .frame(width: 135.0)
+                        
+                        Button(
+                               action: {
+                                   print("Add to Cart")
+                               },
+                               label: {
+                                    Text("Add to Cart")
+                                        .fontWeight(.bold)
+                                        .frame(width: 150,height: 50)
+                                        .foregroundColor(.white)
+                                        .background(Color(hue: 0.115, saturation: 0.979, brightness: 1.0, opacity: 0.379))
+                                        .clipShape(Capsule())
+                            }
+                        )
+                        
+                    }.padding()
+                    
+                }
+                
+                HStack{
+                    VStack{
+                        
+                        Image("açucar")
+                            .resizable()
+                            .frame(width: 135, height: 135)
+                        Text("600,00kz")
+                            .foregroundColor(Color(hue: 0.115, saturation: 1.0, brightness: 1.0))
+                        Text("Sugar")
+                            .font(.headline)
+                            .fontWeight(.bold)
+                            .foregroundColor(Color.gray)
+                            .multilineTextAlignment(.center)
+                            .frame(width: 135.0)
+                        
+                        Button(
+                               action: {
+                                   print("Add to Cart")
+                               },
+                               label: {
+                                    Text("Add to Cart")
+                                        .fontWeight(.bold)
+                                        .frame(width: 150,height: 50)
+                                        .foregroundColor(.white)
+                                        .background(Color(hue: 0.115, saturation: 0.979, brightness: 1.0, opacity: 0.379))
+                                        .clipShape(Capsule())
+                            }
+                        )
+                        
+                    }.padding()
+                    
+                    VStack{
+                        
+                        Image("açucar")
+                            .resizable()
+                            .frame(width: 135, height: 135)
+                        Text("600,00kz")
+                            .foregroundColor(Color(hue: 0.115, saturation: 1.0, brightness: 1.0))
+                        Text("Sugar")
+                            .font(.headline)
+                            .fontWeight(.bold)
+                            .foregroundColor(Color.gray)
+                            .multilineTextAlignment(.center)
+                            .frame(width: 135.0)
+                        
+                        Button(
+                               action: {
+                                   print("Add to Cart")
+                               },
+                               label: {
+                                    Text("Add to Cart")
+                                        .fontWeight(.bold)
+                                        .frame(width: 150,height: 50)
+                                        .foregroundColor(.white)
+                                        .background(Color(hue: 0.115, saturation: 0.979, brightness: 1.0, opacity: 0.379))
+                                        .clipShape(Capsule())
+                            }
+                        )
+                        
+                    }.padding()
+                    
+                }
+                
+                HStack{
+                    VStack{
+                        
+                        Image("açucar")
+                            .resizable()
+                            .frame(width: 135, height: 135)
+                        Text("600,00kz")
+                            .foregroundColor(Color(hue: 0.115, saturation: 1.0, brightness: 1.0))
+                        Text("Sugar")
+                            .font(.headline)
+                            .fontWeight(.bold)
+                            .foregroundColor(Color.gray)
+                            .multilineTextAlignment(.center)
+                            .frame(width: 135.0)
+                        
+                        Button(
+                               action: {
+                                   print("Add to Cart")
+                               },
+                               label: {
+                                    Text("Add to Cart")
+                                        .fontWeight(.bold)
+                                        .frame(width: 150,height: 50)
+                                        .foregroundColor(.white)
+                                        .background(Color(hue: 0.115, saturation: 0.979, brightness: 1.0, opacity: 0.379))
+                                        .clipShape(Capsule())
+                            }
+                        )
+                        
+                    }.padding()
+                    
+                    VStack{
+                        
+                        Image("açucar")
+                            .resizable()
+                            .frame(width: 135, height: 135)
+                        Text("600,00kz")
+                            .foregroundColor(Color(hue: 0.115, saturation: 1.0, brightness: 1.0))
+                        Text("Sugar")
+                            .font(.headline)
+                            .fontWeight(.bold)
+                            .foregroundColor(Color.gray)
+                            .multilineTextAlignment(.center)
+                            .frame(width: 135.0)
+                        
+                        Button(
+                               action: {
+                                   print("Add to Cart")
+                               },
+                               label: {
+                                    Text("Add to Cart")
+                                        .fontWeight(.bold)
+                                        .frame(width: 150,height: 50)
+                                        .foregroundColor(.white)
+                                        .background(Color(hue: 0.115, saturation: 0.979, brightness: 1.0, opacity: 0.379))
+                                        .clipShape(Capsule())
+                            }
+                        )
+                        
+                    }.padding()
+                    
+                }
+            }
+            
+            
+           
         }
         .padding()
     }
