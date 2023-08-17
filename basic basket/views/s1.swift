@@ -110,7 +110,8 @@ struct s1: View {
                             }
                         )
                         
-                    }.padding()
+                    }.padding().border(Color(hue: 0.124, saturation: 1.0, brightness: 1.0), width: 2)
+                        
                     
                     VStack{
                         
@@ -140,7 +141,7 @@ struct s1: View {
                             }
                         )
                         
-                    }.padding()
+                    }.padding().border(Color(hue: 0.124, saturation: 1.0, brightness: 1.0), width: 2)
                     
                 }
                 
@@ -173,7 +174,7 @@ struct s1: View {
                             }
                         )
                         
-                    }.padding()
+                    }.padding().border(Color(hue: 0.124, saturation: 1.0, brightness: 1.0), width: 2)
                     
                     VStack{
                         
@@ -203,70 +204,7 @@ struct s1: View {
                             }
                         )
                         
-                    }.padding()
-                    
-                }
-                
-                HStack{
-                    VStack{
-                        
-                        Image("açucar")
-                            .resizable()
-                            .frame(width: 135, height: 135)
-                        Text("600,00kz")
-                            .foregroundColor(Color(hue: 0.115, saturation: 1.0, brightness: 1.0))
-                        Text("Sugar")
-                            .font(.headline)
-                            .fontWeight(.bold)
-                            .foregroundColor(Color.gray)
-                            .multilineTextAlignment(.center)
-                            .frame(width: 135.0)
-                        
-                        Button(
-                               action: {
-                                   print("Add to Cart")
-                               },
-                               label: {
-                                    Text("Add to Cart")
-                                        .fontWeight(.bold)
-                                        .frame(width: 150,height: 50)
-                                        .foregroundColor(.white)
-                                        .background(Color(hue: 0.115, saturation: 0.979, brightness: 1.0, opacity: 0.379))
-                                        .clipShape(Capsule())
-                            }
-                        )
-                        
-                    }.padding()
-                    
-                    VStack{
-                        
-                        Image("açucar")
-                            .resizable()
-                            .frame(width: 135, height: 135)
-                        Text("600,00kz")
-                            .foregroundColor(Color(hue: 0.115, saturation: 1.0, brightness: 1.0))
-                        Text("Sugar")
-                            .font(.headline)
-                            .fontWeight(.bold)
-                            .foregroundColor(Color.gray)
-                            .multilineTextAlignment(.center)
-                            .frame(width: 135.0)
-                        
-                        Button(
-                               action: {
-                                   print("Add to Cart")
-                               },
-                               label: {
-                                    Text("Add to Cart")
-                                        .fontWeight(.bold)
-                                        .frame(width: 150,height: 50)
-                                        .foregroundColor(.white)
-                                        .background(Color(hue: 0.115, saturation: 0.979, brightness: 1.0, opacity: 0.379))
-                                        .clipShape(Capsule())
-                            }
-                        )
-                        
-                    }.padding()
+                    }.padding().border(Color(hue: 0.124, saturation: 1.0, brightness: 1.0), width: 2)
                     
                 }
                 
@@ -299,7 +237,7 @@ struct s1: View {
                             }
                         )
                         
-                    }.padding()
+                    }.padding().border(Color(hue: 0.124, saturation: 1.0, brightness: 1.0), width: 2)
                     
                     VStack{
                         
@@ -329,7 +267,70 @@ struct s1: View {
                             }
                         )
                         
-                    }.padding()
+                    }.padding().border(Color(hue: 0.124, saturation: 1.0, brightness: 1.0), width: 2)
+                    
+                }
+                
+                HStack{
+                    VStack{
+                        
+                        Image("açucar")
+                            .resizable()
+                            .frame(width: 135, height: 135)
+                        Text("600,00kz")
+                            .foregroundColor(Color(hue: 0.115, saturation: 1.0, brightness: 1.0))
+                        Text("Sugar")
+                            .font(.headline)
+                            .fontWeight(.bold)
+                            .foregroundColor(Color.gray)
+                            .multilineTextAlignment(.center)
+                            .frame(width: 135.0)
+                        
+                        Button(
+                               action: {
+                                   print("Add to Cart")
+                               },
+                               label: {
+                                    Text("Add to Cart")
+                                        .fontWeight(.bold)
+                                        .frame(width: 150,height: 50)
+                                        .foregroundColor(.white)
+                                        .background(Color(hue: 0.115, saturation: 0.979, brightness: 1.0, opacity: 0.379))
+                                        .clipShape(Capsule())
+                            }
+                        )
+                        
+                    }.padding().border(Color(hue: 0.124, saturation: 1.0, brightness: 1.0), width: 2)
+                    
+                    VStack{
+                        
+                        Image("açucar")
+                            .resizable()
+                            .frame(width: 135, height: 135)
+                        Text("600,00kz")
+                            .foregroundColor(Color(hue: 0.115, saturation: 1.0, brightness: 1.0))
+                        Text("Sugar")
+                            .font(.headline)
+                            .fontWeight(.bold)
+                            .foregroundColor(Color.gray)
+                            .multilineTextAlignment(.center)
+                            .frame(width: 135.0)
+                        
+                        Button(
+                               action: {
+                                   print("Add to Cart")
+                               },
+                               label: {
+                                    Text("Add to Cart")
+                                        .fontWeight(.bold)
+                                        .frame(width: 150,height: 50)
+                                        .foregroundColor(.white)
+                                        .background(Color(hue: 0.115, saturation: 0.979, brightness: 1.0, opacity: 0.379))
+                                        .clipShape(Capsule())
+                            }
+                        )
+                        
+                    }.padding().border(Color(hue: 0.124, saturation: 1.0, brightness: 1.0), width: 2)
                     
                 }
             }
