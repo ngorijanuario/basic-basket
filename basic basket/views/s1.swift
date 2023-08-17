@@ -10,12 +10,14 @@ import SwiftUI
 struct s1: View {
     var body: some View {
         
+        
         VStack {
             HStack{
                 Text("Cesta Basíca")
                     .font(.title)
                     .fontWeight(.bold)
                     .foregroundColor(Color(hue: 0.115, saturation: 1.0, brightness: 1.0))
+                    
                 Spacer()
             }
             ScrollView(.horizontal){

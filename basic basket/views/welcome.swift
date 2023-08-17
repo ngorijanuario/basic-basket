@@ -12,7 +12,7 @@ struct Welcome: View {
         VStack {
                 
             entradas
-                .padding(.top, 60)
+              
             
             
             
@@ -49,7 +49,7 @@ extension Welcome{
                     .foregroundColor(.secondary)
                     .fontWeight(.light)
                     .multilineTextAlignment(.center)
-                NavigationLink(destination: AllScreens()) {
+                NavigationLink(destination: AllScreens() .navigationBarBackButtonHidden(true)) {
                         Text("try it now")
                             .fontWeight(.bold)
                             .frame(width: 250,height: 50)
