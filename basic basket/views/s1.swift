@@ -66,7 +66,6 @@ struct s1: View {
     var body: some View {
         NavigationView {
             VStack {
-                
                 Picker("filter by category", selection: $selectedCategory) {
                     ForEach(categories, id: \.self) { category in
                         Text(category).tag(category)
