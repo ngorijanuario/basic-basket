@@ -40,6 +40,9 @@ class Cart: ObservableObject {
 }
 
 struct s1: View {
+    
+    
+    
     @State private var searchText = ""
     @State private var selectedCategory = "All features"
     @StateObject private var cart = Cart()
