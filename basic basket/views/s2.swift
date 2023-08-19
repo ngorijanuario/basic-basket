@@ -7,22 +7,78 @@
 
 import SwiftUI
 
+struct FoodItem: Identifiable {
+    let id = UUID()
+    let name: String
+    let category: String
+}
+
 struct s2: View {
-    var body: some View {
-        ZStack {
-            
-            Circle()
-                .frame(width: 200,height: 200)
-                .foregroundColor(.blue)
-            Text("\(2)")
-                .foregroundColor(.white)
-                .font(.system(size: 70, weight: .bold))
+    @State private var searchText = ""
+    @State private var selectedCategory = "Todos"
+    
+    let categories = ["Todos", "Frutas", "Grãos", "Legumes"]
+    
+    let foodItems: [FoodItem] = [
+        FoodItem(name: "Sugar", category: "All features"),
+        FoodItem(name: "Chicken", category: "Meat"),
+        FoodItem(name: "Corn meal", category: "All features"),
+    ]
+    
+    var filteredFoodItems: [FoodItem] {
+        if searchText.isEmpty && selectedCategory == "Todos" {
+            return foodItems
+        } else if selectedCategory == "Todos" {
+            return foodItems.filter { $0.name.localizedCaseInsensitiveContains(searchText) }
+        } else {
+            return foodItems.filter { $0.name.localizedCaseInsensitiveContains(searchText) && $0.category == selectedCategory }
         }
-        .padding()
+    }
+    
+    var body: some View {
+        NavigationView {
+            VStack {
+                SearchBar(text: $searchText)
+                    .padding(.horizontal)
+                
+                
+                
+                List(filteredFoodItems) { foodItem in
+                    Text(foodItem.name)
+                }
+            }
+            .navigationTitle("Search food")
+        }
     }
 }
 
-struct s2_Previews: PreviewProvider {
+struct SearchBar: View {
+    @Binding var text: String
+    
+    var body: some View {
+        HStack {
+            Image(systemName: "magnifyingglass")
+                .foregroundColor(.gray)
+            
+            TextField("search food", text: $text)
+                .foregroundColor(.primary)
+            
+            if !text.isEmpty {
+                Button(action: {
+                    self.text = ""
+                }) {
+                    Image(systemName: "xmark.circle.fill")
+                        .foregroundColor(.gray)
+                }
+            }
+        }
+        .padding(8)
+        .background(Color(.systemGray6))
+        .cornerRadius(10)
+    }
+}
+
+struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         s2()
     }
