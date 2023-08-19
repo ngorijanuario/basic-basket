@@ -47,9 +47,9 @@ struct s1: View {
     let categories = ["All features", "Vegetables", "Meat", "fish"]
     
     let products: [Product] = [
-        Product(name: "Sugar", category: "All features", imageName: "açucar", price: 1.0),
-        Product(name: "Chicken", category: "Meat", imageName: "frango", price: 2.5),
-        Product(name: "Corn meal", category: "All features", imageName: "fuba", price: 0.8),
+        Product(name: "Sugar", category: "All features", imageName: "açucar", price: 600.00),
+        Product(name: "Chicken", category: "Meat", imageName: "frango", price: 800.00),
+        Product(name: "Corn meal", category: "All features", imageName: "fuba", price: 250.08),
         // ... adicione mais produtos aqui
     ]
     
@@ -104,7 +104,7 @@ struct ProductCardView: View {
             Text(product.name)
                 .font(.headline)
             
-            Text(String(format: "AO%.2f ", product.price))
+            Text(String(format: "AOA %.2f", product.price))
                 .font(.subheadline)
                 .foregroundColor(.green)
             
