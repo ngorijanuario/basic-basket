@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Product: Identifiable {
+struct Product: Identifiable, Equatable {
     let id = UUID()
     let name: String
     let category: String
@@ -27,17 +27,22 @@ class Item: Identifiable {
     }
 }
 class CartViewModel: ObservableObject {
-    @Published var cartItems: [Item] = []
+    @Published var cartItems: [Product] = []
     
-    func addToCart(_ item: Item) {
-        cartItems.append(item)
+    // Add product to the cart
+    func addProduct(_ product: Product) {
+        cartItems.append(product)
     }
     
-    func removeFromCart(_ item: Item) {
-        cartItems.removeAll { $0.id == item.id }
+    // Remove product from the cart
+    func removeFromCart(_ product: Product) {
+        if let index = cartItems.firstIndex(of: product) {
+            cartItems.remove(at: index)
+        }
     }
     
+    // Calculate the total price of items in the cart
     var totalPrice: Double {
-        cartItems.reduce(0) { $0 + $1.price }
+        cartItems.reduce(0.0) { $0 + $1.price }
     }
 }
