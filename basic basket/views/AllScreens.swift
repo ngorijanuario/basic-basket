@@ -8,22 +8,22 @@
 import SwiftUI
 
 struct AllScreens: View {
+    @StateObject private var cartViewModel = CartViewModel()
+    
     var body: some View {
         TabView{
-            s1()
-                .tabItem{
-                    Image(systemName: "list.clipboard.fill")
-                    Text("Marketplace")
+            s1(cartViewModel: cartViewModel)
+                .tabItem {
+                    Label("Marketplace", systemImage: "list.clipboard.fill")
                 }
             s2()
                 .tabItem{
                     Image(systemName: "magnifyingglass")
                     Text("Search")
                 }
-            s3()
-                .tabItem{
-                    Image(systemName: "basket.fill")
-                    Text("Basket")
+            CartView(cartViewModel: cartViewModel)
+                .tabItem {
+                    Label("Basket", systemImage: "basket")
                 }
             s4()
                 .tabItem{
