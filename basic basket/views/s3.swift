@@ -13,16 +13,17 @@ struct CartView: View {
     var body: some View {
         NavigationView {
             VStack {
-                
-                List(cartViewModel.cartItems) { item in
-                    HStack {
-                        Text(item.name)
-                        Spacer()
-                        Text("AOA\(item.price, specifier: "%.2f")")
-                        Button(action: {
-                            cartViewModel.removeFromCart(item)
-                        }) {
-                            Text("Remove")
+                List {
+                    ForEach(cartViewModel.cartItems) { item in
+                        HStack {
+                            Text(item.name)
+                            Spacer()
+                            Text("AOA \(item.price, specifier: "%.2f")")
+                            Button(action: {
+                                cartViewModel.removeFromCart(item)
+                            }) {
+                                Text("Remove")
+                            }
                         }
                     }
                 }
@@ -45,8 +46,14 @@ struct s3: View {
     
     var body: some View {
         TabView {
-            
+            s1(cartViewModel: cartViewModel)
+                .tabItem {
+                    Label("Shop", systemImage: "cart")
+                }
             CartView(cartViewModel: cartViewModel)
+                .tabItem {
+                    Label("Basket", systemImage: "basket")
+                }
         }
     }
 }
@@ -56,3 +63,4 @@ struct s3_Previews: PreviewProvider {
         s3()
     }
 }
+

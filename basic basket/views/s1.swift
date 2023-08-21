@@ -4,35 +4,32 @@
 //
 //  Created by Ngori Januario on 17/08/23.
 //
-
 import SwiftUI
 
 struct s1: View {
     
     @State private var searchText = ""
     @State private var selectedCategory = "All features"
-    var cart = CartViewModel()
+    @StateObject var cartViewModel = CartViewModel() // Initialize the cartViewModel
     
-    let importproducts = dataservice()
-    let importcategories = dataservice()
-    
+    let importProducts = dataservice()
+    let importCategories = dataservice()
     
     var filteredProducts: [Product] {
         if searchText.isEmpty && selectedCategory == "All features" {
-            return importproducts.products
+            return importProducts.products
         } else if selectedCategory == "All features" {
-            return importproducts.products.filter { $0.name.localizedCaseInsensitiveContains(searchText) }
+            return importProducts.products.filter { $0.name.localizedCaseInsensitiveContains(searchText) }
         } else {
-            return importproducts.products.filter { $0.category == selectedCategory }
+            return importProducts.products.filter { $0.category == selectedCategory }
         }
     }
     
     var body: some View {
-        
         NavigationView {
             VStack {
-                Picker("filter by category", selection: $selectedCategory) {
-                    ForEach(importcategories.categories, id: \.self) { category in
+                Picker("Filter by category", selection: $selectedCategory) {
+                    ForEach(importCategories.categories, id: \.self) { category in
                         Text(category).tag(category)
                     }
                 }
@@ -43,7 +40,7 @@ struct s1: View {
                     LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 16) {
                         ForEach(filteredProducts) { product in
                             ProductCardView(product: product)
-                                .environmentObject(cart)
+                                .environmentObject(cartViewModel)
                         }
                     }
                     .padding(.horizontal)
@@ -56,7 +53,7 @@ struct s1: View {
 
 struct ProductCardView: View {
     let product: Product
-    //@EnvironmentObject var cart: CartViewModel()
+    @EnvironmentObject var cart: CartViewModel
     
     var body: some View {
         VStack(spacing: 8) {
@@ -73,11 +70,12 @@ struct ProductCardView: View {
                 .foregroundColor(.green)
             
             Button(action: {
-                //
+                cart.addProduct(product) // Add the product to the cart
+                
             }) {
-                Text("+")
+                Text("Add to Cart") // Changed from "+" to "Add to Cart"
                     .padding(8)
-                    .frame(width: 100,height: 50)
+                    .frame(width: 120) // Adjusted width for readability
                     .background(Color(hue: 0.115, saturation: 1.0, brightness: 1.0))
                     .foregroundColor(.white)
                     .cornerRadius(8)
@@ -89,6 +87,7 @@ struct ProductCardView: View {
         .shadow(radius: 3)
     }
 }
+
 struct s1_Previews: PreviewProvider {
     static var previews: some View {
         s1()
