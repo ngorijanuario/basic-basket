@@ -10,12 +10,7 @@ import SwiftUI
 struct Welcome: View {
     var body: some View {
         VStack {
-                
             entradas
-              
-            
-            
-            
         }
        
     }
