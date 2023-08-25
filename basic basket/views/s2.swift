@@ -15,9 +15,9 @@ struct FoodItem: Identifiable {
 
 struct s2: View {
     @State private var searchText = ""
-    @State private var selectedCategory = "Todos"
+    @State private var selectedCategory = "All features"
     
-    let categories = ["Todos", "Frutas", "Grãos", "Legumes"]
+    let categories = ["All features", "Vegetables", "Meat", "fish"]
     
     let foodItems: [FoodItem] = [
         FoodItem(name: "Sugar", category: "All features"),
@@ -26,9 +26,9 @@ struct s2: View {
     ]
     
     var filteredFoodItems: [FoodItem] {
-        if searchText.isEmpty && selectedCategory == "Todos" {
+        if searchText.isEmpty && selectedCategory == "" {
             return foodItems
-        } else if selectedCategory == "Todos" {
+        } else if selectedCategory == "All features" {
             return foodItems.filter { $0.name.localizedCaseInsensitiveContains(searchText) }
         } else {
             return foodItems.filter { $0.name.localizedCaseInsensitiveContains(searchText) && $0.category == selectedCategory }
@@ -41,11 +41,10 @@ struct s2: View {
                 SearchBar(text: $searchText)
                     .padding(.horizontal)
                 
-                
-                
                 List(filteredFoodItems) { foodItem in
-                    Text(foodItem.name)
+                        Text(foodItem.name)
                 }
+                
             }
             .navigationTitle("Search food")
         }
