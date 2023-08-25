@@ -34,18 +34,18 @@ struct CartView: View {
                 Text("Total: AOA \(cartViewModel.totalPrice, specifier: "%.2f")")
                     .font(.headline)
                     .padding()
-                
-                Button(action: {
-                    // Perform the purchase logic here
-                  }) {
-                      Text("Complete Purchase")
-                          .font(.headline)
-                          .foregroundColor(.white)
-                          .padding()
-                          .background(Color(hue: 0.115, saturation: 1.0, brightness: 1.0))
-                          .cornerRadius(10)
-                        }
-                        .padding()
+                if cartViewModel.cartItems.isEmpty == false {
+                    Button(action: {
+                        // Perform the purchase logic here
+                    }) {
+                        Text("Complete Purchase")
+                            .font(.headline)
+                            .foregroundColor(.white)
+                            .padding()
+                            .background(Color(hue: 0.115, saturation: 1.0, brightness: 1.0))
+                            .cornerRadius(10)
+                    }
+                    .padding()}
             }
             .navigationTitle("Basket")
         }
