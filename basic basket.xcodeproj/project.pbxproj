@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FD02BEEA2A98B9FC00ED06DD /* cardProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD02BEE92A98B9FC00ED06DD /* cardProduct.swift */; };
 		FD380E6C2A8D5C1700951875 /* basic_basketApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD380E6B2A8D5C1700951875 /* basic_basketApp.swift */; };
 		FD380E6E2A8D5C1700951875 /* welcome.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD380E6D2A8D5C1700951875 /* welcome.swift */; };
 		FD380E702A8D5C1B00951875 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD380E6F2A8D5C1B00951875 /* Assets.xcassets */; };
@@ -41,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FD02BEE92A98B9FC00ED06DD /* cardProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cardProduct.swift; sourceTree = "<group>"; };
 		FD380E682A8D5C1700951875 /* basic basket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "basic basket.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD380E6B2A8D5C1700951875 /* basic_basketApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = basic_basketApp.swift; sourceTree = "<group>"; };
 		FD380E6D2A8D5C1700951875 /* welcome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = welcome.swift; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 		FD380E952A8D815000951875 /* viewsModel */ = {
 			isa = PBXGroup;
 			children = (
+				FD02BEE92A98B9FC00ED06DD /* cardProduct.swift */,
 			);
 			path = viewsModel;
 			sourceTree = "<group>";
@@ -310,6 +313,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD02BEEA2A98B9FC00ED06DD /* cardProduct.swift in Sources */,
 				FD4908C52A922473001FB2B9 /* dataservice.swift in Sources */,
 				FD380E6E2A8D5C1700951875 /* welcome.swift in Sources */,
 				FD4908C22A92229E001FB2B9 /* Product.swift in Sources */,
