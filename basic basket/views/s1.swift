@@ -44,6 +44,7 @@ struct s1: View {
                         }
                     }
                     .padding(.horizontal)
+                    .padding(.top)
                 }
             }
             .navigationTitle("Marketplace")
@@ -54,7 +55,7 @@ struct s1: View {
 struct ProductCardView: View {
     let product: Product
     @EnvironmentObject var cart: CartViewModel
-    
+        
     var body: some View {
         VStack(spacing: 8) {
             Image(product.imageName)
