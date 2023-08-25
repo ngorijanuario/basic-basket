@@ -7,31 +7,20 @@
 
 import SwiftUI
 
-struct FoodItem: Identifiable {
-    let id = UUID()
-    let name: String
-    let category: String
-}
-
 struct s2: View {
     @State private var searchText = ""
     @State private var selectedCategory = "All features"
+    let importProducts = dataservice()
+    let importCategories = dataservice()
+    @StateObject var cartViewModel = CartViewModel() // Initialize the cartViewModel
     
-    let categories = ["All features", "Vegetables", "Meat", "fish"]
-    
-    let foodItems: [FoodItem] = [
-        FoodItem(name: "Sugar", category: "All features"),
-        FoodItem(name: "Chicken", category: "Meat"),
-        FoodItem(name: "Corn meal", category: "All features"),
-    ]
-    
-    var filteredFoodItems: [FoodItem] {
+    var filteredProducts: [Product] {
         if searchText.isEmpty && selectedCategory == "" {
-            return foodItems
+            return importProducts.products
         } else if selectedCategory == "All features" {
-            return foodItems.filter { $0.name.localizedCaseInsensitiveContains(searchText) }
+            return importProducts.products.filter { $0.name.localizedCaseInsensitiveContains(searchText) }
         } else {
-            return foodItems.filter { $0.name.localizedCaseInsensitiveContains(searchText) && $0.category == selectedCategory }
+            return importProducts.products.filter { $0.name.localizedCaseInsensitiveContains(searchText) && $0.category == selectedCategory }
         }
     }
     
@@ -40,9 +29,16 @@ struct s2: View {
             VStack {
                 SearchBar(text: $searchText)
                     .padding(.horizontal)
-                
-                List(filteredFoodItems) { foodItem in
-                        Text(foodItem.name)
+                    
+                ScrollView{
+                    LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 16) {
+                        ForEach(filteredProducts) { product in
+                            ProductCardView(product: product)
+                                .environmentObject(cartViewModel)
+                        }
+                    }
+                    .padding(.horizontal)
+                    .padding(.top)
                 }
                 
             }
