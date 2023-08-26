@@ -16,7 +16,7 @@ struct AllScreens: View {
                 .tabItem {
                     Label("Marketplace", systemImage: "list.clipboard.fill")
                 }
-            s2()
+            s2(cartViewModel: cartViewModel)
                 .tabItem{
                     Image(systemName: "magnifyingglass")
                     Text("Search")
