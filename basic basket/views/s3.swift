@@ -4,11 +4,11 @@
 //
 //  Created by Ngori Januario on 17/08/23.
 //
-
 import SwiftUI
 
 struct CartView: View {
     @ObservedObject var cartViewModel: CartViewModel
+    @State private var isPaymentSheetPresented = false // Define the state here
     
     var body: some View {
         NavigationView {
@@ -36,7 +36,7 @@ struct CartView: View {
                     .padding()
                 if cartViewModel.cartItems.isEmpty == false {
                     Button(action: {
-                        // Perform the purchase logic here
+                        isPaymentSheetPresented.toggle()
                     }) {
                         Text("Complete Purchase")
                             .font(.headline)
@@ -45,19 +45,57 @@ struct CartView: View {
                             .background(Color(hue: 0.115, saturation: 1.0, brightness: 1.0))
                             .cornerRadius(10)
                     }
-                    .padding()}
+                    .padding()
+                }
             }
             .navigationTitle("Basket")
+            .sheet(isPresented: $isPaymentSheetPresented) {
+                PaymentOptionsView()
+            }
+        }
+    }
+}
+
+struct PaymentOptionsView: View {
+    var body: some View {
+        VStack {
+            Text("Select a Payment Option")
+                .font(.headline)
+                .padding()
+            
+            // Display payment options buttons here
+            Button(action: {
+                // Handle reference payment logic
+            }) {
+                Text("Reference")
+                    .foregroundColor(Color(hue: 0.115, saturation: 1.0, brightness: 1.0))
+            }
+            .padding()
+            
+            Button(action: {
+                // Handle master card payment logic
+            }) {
+                Text("Master Card")
+                    .foregroundColor(Color(hue: 0.115, saturation: 1.0, brightness: 1.0))
+            }
+            .padding()
+            
+            Button(action: {
+                // Handle visa payment logic
+            }) {
+                Text("Visa")
+                    .foregroundColor(Color(hue: 0.115, saturation: 1.0, brightness: 1.0))
+            }
+            .padding()
         }
     }
 }
 
 struct s3: View {
-    
     @StateObject private var cartViewModel = CartViewModel()
     
     var body: some View {
-        VStack{
+        VStack {
             CartView(cartViewModel: cartViewModel)
         }
     }
@@ -68,4 +106,3 @@ struct s3_Previews: PreviewProvider {
         s3()
     }
 }
-
