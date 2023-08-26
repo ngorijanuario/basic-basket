@@ -16,17 +16,17 @@ struct s4: View {
                     }
                     
                     Section(header: Text("Settings")) {
-                        NavigationLink("Notifications", destination: sView())
-                        NavigationLink("Privacy", destination: sView())
+                        NavigationLink("Notifications", destination: Notifications())
+                        NavigationLink("Privacy", destination: Privacy())
                     }
                     
                     Section(header: Text("Help")) {
-                        NavigationLink("FAQ", destination: sView())
-                        NavigationLink("Contact Support", destination: sView())
+                        NavigationLink("FAQ", destination: FAQ())
+                        NavigationLink("Contact Support", destination: ContactSupport())
                     }
                     
                     Section(header: Text("Invite Friends")) {
-                        NavigationLink("Invite Friends", destination: sView())
+                        NavigationLink("Invite Friends", destination: InviteFriends())
                     }
                 }
             }
@@ -35,9 +35,29 @@ struct s4: View {
     }
 }
 
-struct sView: View {
+struct Notifications: View {
     var body: some View {
-        Text("Hello")
+        Text("Notifications")
+    }
+}
+struct Privacy: View {
+    var body: some View {
+        Text("Privacy")
+    }
+}
+struct FAQ: View {
+    var body: some View {
+        Text("FAQ")
+    }
+}
+struct ContactSupport: View {
+    var body: some View {
+        Text("Contact Support")
+    }
+}
+struct InviteFriends: View {
+    var body: some View {
+        Text("Invite Friends")
     }
 }
 
