@@ -16,17 +16,17 @@ struct s4: View {
                     }
                     
                     Section(header: Text("Settings")) {
-                        Text("Notifications")
-                        Text("Privacy")
+                        NavigationLink("Notifications", destination: sView())
+                        NavigationLink("Privacy", destination: sView())
                     }
                     
                     Section(header: Text("Help")) {
-                        Text("FAQ")
-                        Text("Contact Support")
+                        NavigationLink("FAQ", destination: sView())
+                        NavigationLink("Contact Support", destination: sView())
                     }
                     
                     Section(header: Text("Invite Friends")) {
-                        Text("Invite Friends")
+                        NavigationLink("Invite Friends", destination: sView())
                     }
                 }
             }
@@ -34,6 +34,13 @@ struct s4: View {
         }
     }
 }
+
+struct sView: View {
+    var body: some View {
+        Text("Hello")
+    }
+}
+
 
 struct s4_Previews: PreviewProvider {
     static var previews: some View {
