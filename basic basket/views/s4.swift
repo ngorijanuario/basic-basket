@@ -34,34 +34,6 @@ struct s4: View {
         }
     }
 }
-
-struct Notifications: View {
-    var body: some View {
-        Text("Notifications")
-    }
-}
-struct Privacy: View {
-    var body: some View {
-        Text("Privacy")
-    }
-}
-struct FAQ: View {
-    var body: some View {
-        Text("FAQ")
-    }
-}
-struct ContactSupport: View {
-    var body: some View {
-        Text("Contact Support")
-    }
-}
-struct InviteFriends: View {
-    var body: some View {
-        Text("Invite Friends")
-    }
-}
-
-
 struct s4_Previews: PreviewProvider {
     static var previews: some View {
         s4()
