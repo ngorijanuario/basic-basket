@@ -22,6 +22,11 @@
 		FD44887E2A8DE18F00743710 /* s4.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD44887D2A8DE18F00743710 /* s4.swift */; };
 		FD4908C22A92229E001FB2B9 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4908C12A92229E001FB2B9 /* Product.swift */; };
 		FD4908C52A922473001FB2B9 /* dataservice.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4908C42A922473001FB2B9 /* dataservice.swift */; };
+		FDA686052A9B6A3A00B65028 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA686042A9B6A3A00B65028 /* Notifications.swift */; };
+		FDA686072A9B6A8200B65028 /* Privacy.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA686062A9B6A8200B65028 /* Privacy.swift */; };
+		FDA686092A9B6B1700B65028 /* FAQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA686082A9B6B1700B65028 /* FAQ.swift */; };
+		FDA6860B2A9B6B5300B65028 /* ContactSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA6860A2A9B6B5300B65028 /* ContactSupport.swift */; };
+		FDA6860D2A9B6B8900B65028 /* InviteFriends.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA6860C2A9B6B8900B65028 /* InviteFriends.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +65,11 @@
 		FD44887D2A8DE18F00743710 /* s4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = s4.swift; sourceTree = "<group>"; };
 		FD4908C12A92229E001FB2B9 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		FD4908C42A922473001FB2B9 /* dataservice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dataservice.swift; sourceTree = "<group>"; };
+		FDA686042A9B6A3A00B65028 /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
+		FDA686062A9B6A8200B65028 /* Privacy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Privacy.swift; sourceTree = "<group>"; };
+		FDA686082A9B6B1700B65028 /* FAQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQ.swift; sourceTree = "<group>"; };
+		FDA6860A2A9B6B5300B65028 /* ContactSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactSupport.swift; sourceTree = "<group>"; };
+		FDA6860C2A9B6B8900B65028 /* InviteFriends.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteFriends.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,11 +168,16 @@
 			isa = PBXGroup;
 			children = (
 				FD380E6D2A8D5C1700951875 /* welcome.swift */,
-				FD44887B2A8DE18200743710 /* s3.swift */,
-				FD44887D2A8DE18F00743710 /* s4.swift */,
-				FD4488752A8DE07200743710 /* AllScreens.swift */,
 				FD4488772A8DE16900743710 /* s1.swift */,
 				FD4488792A8DE17200743710 /* s2.swift */,
+				FD44887B2A8DE18200743710 /* s3.swift */,
+				FD44887D2A8DE18F00743710 /* s4.swift */,
+				FDA6860C2A9B6B8900B65028 /* InviteFriends.swift */,
+				FDA6860A2A9B6B5300B65028 /* ContactSupport.swift */,
+				FDA686082A9B6B1700B65028 /* FAQ.swift */,
+				FDA686062A9B6A8200B65028 /* Privacy.swift */,
+				FDA686042A9B6A3A00B65028 /* Notifications.swift */,
+				FD4488752A8DE07200743710 /* AllScreens.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -315,14 +330,19 @@
 			files = (
 				FD02BEEA2A98B9FC00ED06DD /* cardProduct.swift in Sources */,
 				FD4908C52A922473001FB2B9 /* dataservice.swift in Sources */,
+				FDA6860B2A9B6B5300B65028 /* ContactSupport.swift in Sources */,
+				FDA686072A9B6A8200B65028 /* Privacy.swift in Sources */,
+				FDA686052A9B6A3A00B65028 /* Notifications.swift in Sources */,
 				FD380E6E2A8D5C1700951875 /* welcome.swift in Sources */,
 				FD4908C22A92229E001FB2B9 /* Product.swift in Sources */,
 				FD44887C2A8DE18200743710 /* s3.swift in Sources */,
 				FD4488762A8DE07200743710 /* AllScreens.swift in Sources */,
 				FD44887A2A8DE17200743710 /* s2.swift in Sources */,
+				FDA686092A9B6B1700B65028 /* FAQ.swift in Sources */,
 				FD380E6C2A8D5C1700951875 /* basic_basketApp.swift in Sources */,
 				FD44887E2A8DE18F00743710 /* s4.swift in Sources */,
 				FD4488782A8DE16900743710 /* s1.swift in Sources */,
+				FDA6860D2A9B6B8900B65028 /* InviteFriends.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
