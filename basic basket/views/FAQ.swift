@@ -9,7 +9,16 @@ import SwiftUI
 
 struct FAQ: View {
     var body: some View {
-        Text("FAQ")
+        List {
+            Section(header: Text("FAQ Options")) {
+                Text("New FAQ Entries")
+                Text("FAQ Updates")
+                Text("Answered Questions")
+                Text("Popular FAQs")
+                Text("FAQ Feedback")
+            }
+        }
+        .navigationTitle("FAQ")
     }
 }
 struct FAQ_Previews: PreviewProvider {
