@@ -9,7 +9,17 @@ import SwiftUI
 
 struct Privacy: View {
     var body: some View {
-        Text("Privacy")
+        List {
+            Section(header: Text("Privacy Options")) {
+                Text("location sharing")
+                Text("Activity log")
+            }
+            Section(header: Text("Payment options")) {
+                Text("Manage cards")
+                Text("Payment help")
+            }
+        }
+        .navigationTitle("Privacy")
     }
 }
 
