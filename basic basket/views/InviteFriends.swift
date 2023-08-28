@@ -9,7 +9,13 @@ import SwiftUI
 
 struct InviteFriends: View {
     var body: some View {
-        Text("Invite Friends")
+        List {
+            Section(header: Text("Invite Friends Options")) {
+                Text("Share link")
+                Text("Share QRcode")
+            }
+        }
+        .navigationTitle("Invite Friends")
     }
 }
 struct InviteFriends_Previews: PreviewProvider {
