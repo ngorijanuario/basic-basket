@@ -11,8 +11,12 @@ struct Notifications: View {
     var body: some View {
         List {
             Section(header: Text("Notification Options")) {
-                Text("Option 1")
-                Text("Option 2")
+                Text("Order Updates")
+                Text("Promotions and Deals")
+                Text("Stock Availability")
+                Text("Price Drop Alerts")
+                Text("New Product Arrivals")
+                Text("Account Activity")
             }
         }
         .navigationTitle("Notifications")
