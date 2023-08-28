@@ -9,7 +9,16 @@ import SwiftUI
 
 struct ContactSupport: View {
     var body: some View {
-        Text("Contact Support")
+        List {
+            Section(header: Text("Contact Support Options")) {
+                Text("Ticket Updates")
+                Text("Response Times")
+                Text("Live Chat Availability")
+                Text("Resolution Notifications")
+                Text("Feedback Requests")
+            }
+        }
+        .navigationTitle("Contact Support")
     }
 }
 
