@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		FD02BEEA2A98B9FC00ED06DD /* cardProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD02BEE92A98B9FC00ED06DD /* cardProduct.swift */; };
+		FD1B14762A9E8E450003DB9A /* ReferencePaymentFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1B14752A9E8E450003DB9A /* ReferencePaymentFormView.swift */; };
+		FD1B14782A9E90290003DB9A /* MasterCardPaymentFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1B14772A9E90290003DB9A /* MasterCardPaymentFormView.swift */; };
+		FD1B147A2A9E904D0003DB9A /* VisaPaymentFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1B14792A9E904D0003DB9A /* VisaPaymentFormView.swift */; };
 		FD380E6C2A8D5C1700951875 /* basic_basketApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD380E6B2A8D5C1700951875 /* basic_basketApp.swift */; };
 		FD380E6E2A8D5C1700951875 /* welcome.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD380E6D2A8D5C1700951875 /* welcome.swift */; };
 		FD380E702A8D5C1B00951875 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD380E6F2A8D5C1B00951875 /* Assets.xcassets */; };
@@ -48,6 +51,9 @@
 
 /* Begin PBXFileReference section */
 		FD02BEE92A98B9FC00ED06DD /* cardProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cardProduct.swift; sourceTree = "<group>"; };
+		FD1B14752A9E8E450003DB9A /* ReferencePaymentFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReferencePaymentFormView.swift; sourceTree = "<group>"; };
+		FD1B14772A9E90290003DB9A /* MasterCardPaymentFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterCardPaymentFormView.swift; sourceTree = "<group>"; };
+		FD1B14792A9E904D0003DB9A /* VisaPaymentFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisaPaymentFormView.swift; sourceTree = "<group>"; };
 		FD380E682A8D5C1700951875 /* basic basket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "basic basket.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD380E6B2A8D5C1700951875 /* basic_basketApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = basic_basketApp.swift; sourceTree = "<group>"; };
 		FD380E6D2A8D5C1700951875 /* welcome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = welcome.swift; sourceTree = "<group>"; };
@@ -171,6 +177,9 @@
 				FD4488772A8DE16900743710 /* s1.swift */,
 				FD4488792A8DE17200743710 /* s2.swift */,
 				FD44887B2A8DE18200743710 /* s3.swift */,
+				FD1B14792A9E904D0003DB9A /* VisaPaymentFormView.swift */,
+				FD1B14772A9E90290003DB9A /* MasterCardPaymentFormView.swift */,
+				FD1B14752A9E8E450003DB9A /* ReferencePaymentFormView.swift */,
 				FD44887D2A8DE18F00743710 /* s4.swift */,
 				FDA6860C2A9B6B8900B65028 /* InviteFriends.swift */,
 				FDA6860A2A9B6B5300B65028 /* ContactSupport.swift */,
@@ -332,13 +341,16 @@
 				FD4908C52A922473001FB2B9 /* dataservice.swift in Sources */,
 				FDA6860B2A9B6B5300B65028 /* ContactSupport.swift in Sources */,
 				FDA686072A9B6A8200B65028 /* Privacy.swift in Sources */,
+				FD1B147A2A9E904D0003DB9A /* VisaPaymentFormView.swift in Sources */,
 				FDA686052A9B6A3A00B65028 /* Notifications.swift in Sources */,
+				FD1B14762A9E8E450003DB9A /* ReferencePaymentFormView.swift in Sources */,
 				FD380E6E2A8D5C1700951875 /* welcome.swift in Sources */,
 				FD4908C22A92229E001FB2B9 /* Product.swift in Sources */,
 				FD44887C2A8DE18200743710 /* s3.swift in Sources */,
 				FD4488762A8DE07200743710 /* AllScreens.swift in Sources */,
 				FD44887A2A8DE17200743710 /* s2.swift in Sources */,
 				FDA686092A9B6B1700B65028 /* FAQ.swift in Sources */,
+				FD1B14782A9E90290003DB9A /* MasterCardPaymentFormView.swift in Sources */,
 				FD380E6C2A8D5C1700951875 /* basic_basketApp.swift in Sources */,
 				FD44887E2A8DE18F00743710 /* s4.swift in Sources */,
 				FD4488782A8DE16900743710 /* s1.swift in Sources */,
