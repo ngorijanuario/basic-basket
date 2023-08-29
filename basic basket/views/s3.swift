@@ -56,16 +56,34 @@ struct CartView: View {
     }
 }
 
+enum PaymentOption: Identifiable {
+    case reference, masterCard, visa
+    
+    var id: PaymentOption { self }
+    
+    var stringValue: String {
+        switch self {
+        case .reference:
+            return "Reference"
+        case .masterCard:
+            return "Master Card"
+        case .visa:
+            return "Visa"
+        }
+    }
+}
+
 struct PaymentOptionsView: View {
+    @State private var selectedPaymentOption: PaymentOption?
+    
     var body: some View {
         VStack {
             Text("Select a Payment Option")
                 .font(.headline)
                 .padding()
             
-            // Display payment options buttons here
             Button(action: {
-                // Handle reference payment logic
+                selectedPaymentOption = .reference
             }) {
                 Text("Reference")
                     .foregroundColor(Color(hue: 0.115, saturation: 1.0, brightness: 1.0))
@@ -73,7 +91,7 @@ struct PaymentOptionsView: View {
             .padding()
             
             Button(action: {
-                // Handle master card payment logic
+                selectedPaymentOption = .masterCard
             }) {
                 Text("Master Card")
                     .foregroundColor(Color(hue: 0.115, saturation: 1.0, brightness: 1.0))
@@ -81,15 +99,33 @@ struct PaymentOptionsView: View {
             .padding()
             
             Button(action: {
-                // Handle visa payment logic
+                selectedPaymentOption = .visa
             }) {
                 Text("Visa")
                     .foregroundColor(Color(hue: 0.115, saturation: 1.0, brightness: 1.0))
             }
             .padding()
         }
+        .sheet(item: $selectedPaymentOption) { paymentOption in
+            paymentForm(for: paymentOption)
+        }
+    }
+    
+    @ViewBuilder
+    private func paymentForm(for paymentOption: PaymentOption) -> some View {
+        switch paymentOption {
+        case .reference:
+            ReferencePaymentFormView()
+        case .masterCard:
+            MasterCardPaymentFormView()
+        case .visa:
+            VisaPaymentFormView()
+        }
     }
 }
+
+
+
 
 struct s3: View {
     @StateObject private var cartViewModel = CartViewModel()
