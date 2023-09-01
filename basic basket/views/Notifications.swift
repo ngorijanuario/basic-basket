@@ -8,13 +8,16 @@
 import SwiftUI
 
 struct Notifications: View {
+    @State private var dropalerts = false
     var body: some View {
         List {
             Section(header: Text("Notification Options")) {
                 Text("Order Updates")
                 Text("Promotions and Deals")
                 Text("Stock Availability")
-                Text("Price Drop Alerts")
+                Toggle(isOn: $dropalerts) {
+                    Text("Price Drop Alerts")
+                }
                 Text("New Product Arrivals")
                 Text("Account Activity")
             }
